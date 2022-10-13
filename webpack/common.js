@@ -1,5 +1,6 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 const ROOT = path.resolve(__dirname, "..");
 
@@ -30,7 +31,9 @@ module.exports.paths = paths;
 
 /** @type {import("webpack").Configuration} */
 const config = {
-  entry: [paths.src("index.js")],
+  entry: {
+    index: [paths.src("index.js")],
+  },
   output: {
     path: paths.build(),
     clean: true,
@@ -39,15 +42,17 @@ const config = {
   module: {
     rules: [
       {
-        test: /\.html$/i,
-        loader: "html-loader",
+        test: /\.css$/i,
+        use: [MiniCssExtractPlugin.loader, "css-loader"],
       },
     ],
   },
 
   plugins: [
+    new MiniCssExtractPlugin(),
     new HtmlWebpackPlugin({
       template: paths.src("index.html"),
+      chunks: ["index"],
     }),
   ],
 };

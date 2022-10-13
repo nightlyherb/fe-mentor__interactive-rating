@@ -4,7 +4,6 @@
   "description": "Frontend Mentor - Interactive rating component coding challenge",
   "main": "index.js",
   "scripts": {
-    "build:dev": "webpack --config=./webpack/dev.config.js",
     "build:prod": "webpack --config=./webpack/prod.config.js",
     "serve": "webpack serve --config=./webpack/dev.config.js"
   },
@@ -25,6 +24,7 @@
     "deepmerge": "^4.2.2",
     "html-loader": "^4.2.0",
     "html-webpack-plugin": "^5.5.0",
+    "mini-css-extract-plugin": "^2.6.1",
     "sass": "^1.55.0",
     "sass-loader": "^13.1.0",
     "style-loader": "^3.3.1",
