@@ -2,19 +2,37 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 const ROOT = path.resolve(__dirname, "..");
-module.exports.ROOT = ROOT;
 
-const SRC = path.join(ROOT, "src");
-module.exports.SRC = SRC;
+const paths = {
+  /**
+   * @param {string[]} relpaths
+   */
+  root(...relpaths) {
+    return path.join(ROOT, ...relpaths);
+  },
 
-const BUILD = path.join(ROOT, "build");
-module.exports.BUILD = BUILD;
+  /**
+   * @param {string[]} relpaths
+   */
+  src(...relpaths) {
+    return path.join(ROOT, "src", ...relpaths);
+  },
+
+  /**
+   * @param {string[]} relpaths
+   */
+  build(...relpaths) {
+    return path.join(ROOT, "build", ...relpaths);
+  },
+};
+
+module.exports.paths = paths;
 
 /** @type {import("webpack").Configuration} */
 const config = {
-  entry: [path.join(SRC, "index.js")],
+  entry: [paths.src("index.js")],
   output: {
-    path: BUILD,
+    path: paths.build(),
     clean: true,
   },
 
@@ -29,7 +47,7 @@ const config = {
 
   plugins: [
     new HtmlWebpackPlugin({
-      template: path.join(SRC, "index.html"),
+      template: paths.src("index.html"),
     }),
   ],
 };

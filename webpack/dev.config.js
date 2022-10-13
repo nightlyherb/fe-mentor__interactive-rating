@@ -1,4 +1,4 @@
-const common = require("./common.js");
+const { paths, config: commonConfig } = require("./common.js");
 const merge = require("./merge-config.js");
 
 const devConfig = {
@@ -10,10 +10,10 @@ const devConfig = {
 
   devServer: {
     static: {
-      directory: common.BUILD,
+      directory: paths.build(),
     },
   },
 };
 
-const config = merge(common.config, devConfig);
+const config = merge(commonConfig, devConfig);
 module.exports = config;
