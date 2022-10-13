@@ -1,0 +1,36 @@
+{
+  "name": "fe-mentor__interactive-rating",
+  "version": "0.0.1",
+  "description": "Frontend Mentor - Interactive rating component coding challenge",
+  "main": "index.js",
+  "scripts": {
+    "build:prod": "webpack --config=./webpack/prod.config.js",
+    "serve": "webpack serve --config=./webpack/dev.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nightlyherb/fe-mentor__interactive-rating.git"
+  },
+  "keywords": [],
+  "author": "NightlyHerb <82109216+nightlyherb@users.noreply.github.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nightlyherb/fe-mentor__interactive-rating/issues"
+  },
+  "homepage": "https://github.com/nightlyherb/fe-mentor__interactive-rating#readme",
+  "devDependencies": {
+    "@types/webpack": "^5.28.0",
+    "css-loader": "^6.7.1",
+    "deepmerge": "^4.2.2",
+    "html-loader": "^4.2.0",
+    "html-webpack-plugin": "^5.5.0",
+    "mini-css-extract-plugin": "^2.6.1",
+    "sass": "^1.55.0",
+    "sass-loader": "^13.1.0",
+    "style-loader": "^3.3.1",
+    "webpack-cli": "^4.10.0"
+  },
+  "dependencies": {
+    "webpack-dev-server": "^4.11.1"
+  }
+}
