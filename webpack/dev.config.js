@@ -1,9 +1,12 @@
 const common = require("./common.js");
+const merge = require("./merge-config.js");
 
-module.exports = {
-  ...common.config,
-
+const devConfig = {
   mode: "development",
+
+  module: {
+    rules: [],
+  },
 
   devServer: {
     static: {
@@ -11,3 +14,6 @@ module.exports = {
     },
   },
 };
+
+const config = merge(common.config, devConfig);
+module.exports = config;

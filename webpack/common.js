@@ -7,22 +7,24 @@ module.exports.ROOT = ROOT;
 const BUILD_DIRECTORY = path.join(ROOT, "build");
 module.exports.BUILD_DIRECTORY = BUILD_DIRECTORY;
 
+/** @type {import("webpack").Configuration} */
 const config = {
-  entry: path.join(ROOT, "src", "index.js"),
+  entry: path.join(ROOT, "src", "index.html"),
   output: {
     path: BUILD_DIRECTORY,
+    clean: true,
   },
 
   module: {
     rules: [
       {
-        test: /\.(scss|sass)$/i,
-        use: ["style-loader", "css-loader", "sass-loader"],
+        test: /\.html$/i,
+        loader: "html-loader",
       },
     ],
   },
 
-  plugins: [new HtmlWebpackPlugin({ template: "./src/public/index.html" })],
+  plugins: [],
 };
 
 module.exports.config = config;

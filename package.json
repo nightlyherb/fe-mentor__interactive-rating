@@ -20,7 +20,10 @@
   },
   "homepage": "https://github.com/nightlyherb/fe-mentor__interactive-rating#readme",
   "devDependencies": {
+    "@types/webpack": "^5.28.0",
     "css-loader": "^6.7.1",
+    "deepmerge": "^4.2.2",
+    "html-loader": "^4.2.0",
     "html-webpack-plugin": "^5.5.0",
     "sass": "^1.55.0",
     "sass-loader": "^13.1.0",
