@@ -4,14 +4,17 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const ROOT = path.resolve(__dirname, "..");
 module.exports.ROOT = ROOT;
 
-const BUILD_DIRECTORY = path.join(ROOT, "build");
-module.exports.BUILD_DIRECTORY = BUILD_DIRECTORY;
+const SRC = path.join(ROOT, "src");
+module.exports.SRC = SRC;
+
+const BUILD = path.join(ROOT, "build");
+module.exports.BUILD = BUILD;
 
 /** @type {import("webpack").Configuration} */
 const config = {
-  entry: path.join(ROOT, "src", "index.html"),
+  entry: [path.join(SRC, "index.js")],
   output: {
-    path: BUILD_DIRECTORY,
+    path: BUILD,
     clean: true,
   },
 
@@ -24,7 +27,11 @@ const config = {
     ],
   },
 
-  plugins: [],
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: path.join(SRC, "index.html"),
+    }),
+  ],
 };
 
 module.exports.config = config;

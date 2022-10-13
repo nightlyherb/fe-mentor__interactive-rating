@@ -10,7 +10,7 @@ const devConfig = {
 
   devServer: {
     static: {
-      directory: common.BUILD_DIRECTORY,
+      directory: common.BUILD,
     },
   },
 };
