@@ -1,12 +1,14 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
-const BUILD_DIRECTORY = path.join(__dirname, "build");
+const ROOT = path.resolve(__dirname, "..");
+module.exports.ROOT = ROOT;
 
-module.exports = {
-  mode: "development",
+const BUILD_DIRECTORY = path.join(ROOT, "build");
+module.exports.BUILD_DIRECTORY = BUILD_DIRECTORY;
 
-  entry: "./src/index.js", // The default
+const config = {
+  entry: path.join(ROOT, "src", "index.js"),
   output: {
     path: BUILD_DIRECTORY,
   },
@@ -21,10 +23,6 @@ module.exports = {
   },
 
   plugins: [new HtmlWebpackPlugin({ template: "./src/public/index.html" })],
-
-  devServer: {
-    static: {
-      directory: BUILD_DIRECTORY,
-    },
-  },
 };
+
+module.exports.config = config;
