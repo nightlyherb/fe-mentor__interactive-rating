@@ -1,4 +1,5 @@
 node_modules
+/build
 
 # Avoid accidental upload of the Sketch and Figma design files
 #####################################################
