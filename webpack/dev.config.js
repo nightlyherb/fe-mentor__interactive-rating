@@ -9,9 +9,7 @@ const devConfig = {
   },
 
   devServer: {
-    static: {
-      directory: paths.build(),
-    },
+    static: false,
   },
 };
 
