@@ -49,6 +49,10 @@ const config = {
         test: /\.scss$/i,
         use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"],
       },
+      {
+        test: /\.html$/i,
+        use: ["html-loader"],
+      },
     ],
   },
 
