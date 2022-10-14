@@ -1,7 +1,12 @@
-const common = require("./common.js");
+const { config: commonConfig } = require("./common.js");
+const merge = require("./merge-config.js");
 
-module.exports = {
-  ...common.config,
-
+const prodConfig = {
   mode: "production",
+
+  module: {
+    rules: [],
+  },
 };
+
+module.exports = merge(commonConfig, prodConfig);
