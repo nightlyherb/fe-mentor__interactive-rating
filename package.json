@@ -4,7 +4,8 @@
   "description": "Frontend Mentor - Interactive rating component coding challenge",
   "main": "index.js",
   "scripts": {
-    "build:prod": "webpack --config=./webpack/prod.config.js",
+    "build": "webpack --config=./webpack/prod.config.js",
+    "build:prod": "npm run build",
     "serve": "webpack serve --config=./webpack/dev.config.js"
   },
   "repository": {
