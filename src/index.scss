@@ -18,6 +18,20 @@ body {
   color: $white;
 }
 
+main {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+
+  $gap: 30px;
+  gap: $gap;
+  padding: $gap;
+}
+
+// Components
+
+@import "./rating.scss";
+@import "./rating-result.scss";
 
 // Attribution
 
