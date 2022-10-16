@@ -11,6 +11,9 @@ const devConfig = {
   devServer: {
     static: false,
   },
+  output: {
+    clean: false,
+  },
 };
 
 const config = merge(commonConfig, devConfig);
