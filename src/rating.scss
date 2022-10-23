@@ -1,6 +1,69 @@
 @use "./core.scss" as *;
 @use "./card.scss" as *;
 
+@mixin round {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 40px;
+  height: 40px;
+
+  border-radius: 50%;
+  background-color: $less-dark-blue;
+  color: $light-grey;
+}
+
+$gap-small: 16px;
+$gap-medium: 24px;
+
 .rating {
   @include card;
+}
+
+.rating__title {
+  font-size: 32px;
+  margin-top: $gap-medium;
+  margin-bottom: $gap-small;
+}
+
+.rating__icon {
+  @include round;
+}
+
+.rating__rating {
+  display: flex;
+  justify-content: space-between;
+
+  width: 100%;
+  margin: $gap-medium auto;
+  border: none;
+}
+
+.rating__rating label {
+  @include round;
+}
+
+.rating__message {
+  color: $light-grey;
+}
+
+.rating__rating input[type="radio"] {
+  display: none;
+}
+
+.rating__submit {
+  display: flex;
+
+  width: 100%;
+  height: 45px;
+
+  border: none;
+  border-radius: 100vmax;
+
+  background-color: $orange;
+  color: $white;
+
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
 }
