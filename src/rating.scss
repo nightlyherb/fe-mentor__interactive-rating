@@ -1,0 +1,6 @@
+@use "./core.scss" as *;
+@use "./card.scss" as *;
+
+.rating {
+  @include card;
+}

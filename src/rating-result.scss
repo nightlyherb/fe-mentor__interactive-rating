@@ -1,0 +1,5 @@
+@use "./card.scss" as *;
+
+.rating-result {
+  @include card;
+}

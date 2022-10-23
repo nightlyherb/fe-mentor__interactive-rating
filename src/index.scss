@@ -1,8 +1,39 @@
+@use "./core.scss" as *;
+
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap");
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
+// Global styles
+* {
+  font-family: $main-font-family;
+}
+
+body {
+  background-color: $very-dark-blue;
+  color: $white;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+
+  $gap: 30px;
+  gap: $gap;
+  padding: $gap;
+}
+
+// Components
+
+@import "./rating.scss";
+@import "./rating-result.scss";
+
+// Attribution
 
 .attribution {
   font-size: 11px;
