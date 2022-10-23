@@ -1,3 +1,5 @@
+@use "./card.scss" as *;
+
 .rating-result {
-  max-width: 480px;
+  @include card;
 }
