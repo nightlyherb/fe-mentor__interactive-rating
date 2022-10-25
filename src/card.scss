@@ -1,8 +1,7 @@
 @use "./core.scss" as *;
 
 @mixin card {
-  max-width: 480px;
-  height: 50vh;
+  max-width: 360px;
   background-color: $dark-blue;
   border-radius: 13px;
   padding: 24px;
