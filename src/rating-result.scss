@@ -1,5 +1,50 @@
 @use "./card.scss" as *;
+@use "./core.scss" as *;
+
+@mixin grid-center {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 .rating-result {
   @include card;
+
+  display: grid;
+  grid-template-columns: 100%;
+  justify-items: center;
+  align-items: start;
+  align-content: start;
+  row-gap: 15px;
+}
+
+.rating-result__image {
+  @include grid-center;
+}
+
+.rating-result__result {
+  background-color: $less-dark-blue;
+  @include flex-center;
+  border-radius: 100vmax;
+  padding-block: 0.5em;
+  padding-inline: 1.25em;
+}
+
+.rating-result__rating::after {
+  content: attr(data-rating);
+}
+
+.rating-result__title {
+  font-size: $title-font-size;
+  line-height: 1;
+}
+
+.rating-result__message {
+  text-align: center;
 }
