@@ -17,7 +17,11 @@
 $gap-small: 16px;
 $gap-medium: 24px;
 
-.rating {
+.rating:not([data-active]) {
+  display: none;
+}
+
+.rating[data-active] {
   @include card;
 }
 

@@ -13,7 +13,11 @@
   align-items: center;
 }
 
-.rating-result {
+.rating-result:not([data-active]) {
+  display: none;
+}
+
+.rating-result[data-active] {
   @include card;
 
   display: grid;
