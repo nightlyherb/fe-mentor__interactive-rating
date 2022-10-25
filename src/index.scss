@@ -14,6 +14,12 @@
 }
 
 body {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr auto;
+
+  height: 100vh;
+
   background-color: $very-dark-blue;
   color: $white;
 }
@@ -22,11 +28,13 @@ main {
   display: grid;
   grid-template-columns: 1fr;
   justify-items: center;
-
-  $gap: 30px;
-  gap: $gap;
-  padding: $gap;
+  align-items: center;
 }
+
+.rating {
+  display: none;
+}
+
 
 // Components
 

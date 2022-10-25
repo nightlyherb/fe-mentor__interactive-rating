@@ -18,9 +18,8 @@ $gap-small: 16px;
 $gap-medium: 24px;
 
 .rating {
-  display: none;
+  @include card;
 }
-
 
 .rating__title {
   font-size: $title-font-size;
