@@ -44,8 +44,21 @@ $gap-medium: 24px;
   border: none;
 }
 
-.rating__rating label {
-  @include round;
+.rating__rating__label {
+  :where(&) {
+    @include round;
+  }
+
+  :where(input[type="radio"]:checked ~ &) {
+    background-color: $medium-grey;
+    color: $white;
+  }
+
+  :where(&:hover) {
+    background-color: $orange;
+    color: $white;
+  }
+
 }
 
 .rating__message {
