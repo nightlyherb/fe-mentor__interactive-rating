@@ -17,7 +17,7 @@
   <body>
     <main>
       <!-- Rating state start -->
-      <form class="rating" data-active>
+      <form class="rating" id="rating" data-active>
         <div class="rating__icon">
           <img src="../images/icon-star.svg" alt="Star Icon" />
         </div>
@@ -61,7 +61,7 @@
       <!-- Rating state end -->
 
       <!-- Thank you state start -->
-      <div class="rating-result">
+      <div class="rating-result" id="rating-result">
         <div class="rating-result__image">
           <img
             src="../images/illustration-thank-you.svg"
@@ -71,7 +71,15 @@
         </div>
 
         <div class="rating-result__result">
-          <span>You selected <span class="rating-result__rating" data-rating="5"></span> out of 5</span>
+          <span
+            >You selected
+            <span
+              class="rating-result__rating"
+              id="rating-result__rating"
+              data-rating="5"
+            ></span>
+            out of 5</span
+          >
         </div>
 
         <div class="rating-result__title">Thank you!</div>
