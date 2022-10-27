@@ -4,6 +4,7 @@
   "description": "Frontend Mentor - Interactive rating component coding challenge",
   "main": "index.js",
   "scripts": {
+    "dev": "npm run serve",
     "build": "webpack --config=./webpack/prod.config.js",
     "build:prod": "npm run build",
     "serve": "webpack serve --config=./webpack/dev.config.js"
